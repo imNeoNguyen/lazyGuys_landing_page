@@ -11,178 +11,161 @@ import img04 from './assets/images/img_04.jpg';
 import img05 from './assets/images/img_05.jpg';
 import img06 from './assets/images/img_06.png';
 import votinh from './assets/images/votinh.png';
-
+import kyren from './assets/images/kyren.jpg';
+import felix from './assets/images/felix.jpg';
+import kylam from './assets/images/ky_lam.jpg';
+import team from './assets/images/team.jpg';
+import nhanvan from './assets/images/nhanvan.jpg';
+import tanlan from './assets/images/tanlan.jpg';
 
 export const GUILD_DATA = {
   name: "LazyGuys",
-  subName: "Guild Hall",
-  edition: "LazyGuys Edition",
+  subName: "Bang hội",
+  edition: "Tuỳ duyên mà đến",
   foundedYear: "2025",
-
-  slogan: "Play calmly, relax together, and enjoy the game.",
-
-  philosophy: "A guild created for relaxation, friendship, and simple fun.",
-
+  slogan: "Bình bình yên yên vui là được",
+  philosophy: "LazyGuys",
   intro: {
-    title: "The Lazy Way",
-    verticalTitle: "ESSENCE",
-    verticalSubtitle: "Peaceful Gaming",
-    bgImage: bannerGuild,
-    themeColor: "rgba(255, 240, 243, 0.7)",
-
-    description1:
-      "LazyGuys was founded simply because the leader had too much free time and nothing better to do.",
-
-    description2:
-      "What started as a small joke slowly became a place where people could gather, relax, and enjoy games together. No pressure, no drama — just peaceful gaming.",
-
+    title: "Những người hướng nội",
+    verticalTitle: "Giới Thiệu",
+    verticalSubtitle: "Anh Đào Thanh Khiết",
+    bgImage: img01,
+    themeColor: "rgba(245, 245, 240, 0.7)", // Parchment
+    description1: "LazyGuys ra đời vì đại đương gia bị rảnh.",
+    description2: "Ờmmm, chưa biết ghi gì ở đây nữa, đại đại đi",
     features: [
       {
-        title: "Relaxed Play",
-        desc: "No stress, no rush — just enjoy the game."
+        title: "Gió",
+        desc: "Chuyển động như làn gió xuân dịu dàng."
       },
       {
-        title: "Good Vibes",
-        desc: "Stay calm, play peacefully, and have fun together."
+        title: "Tĩnh",
+        desc: "Tâm hồn bình lặng như mặt hồ trong xanh."
       }
     ],
-
-    image: img06
+    image: img03
   },
-
+  // To use local images:
+  // 1. Place your images in src/assets/images/
+  // 2. Import them at the top: import heroImg from './assets/images/hero.jpg';
+  // 3. Replace the URL string with the imported variable.
+  
   heroImage: bannerGuild,
-
   characterSection: {
-    title: "Guild Members",
-    subtitle: "People who enjoy the game together.",
-    verticalTitle: "MEMBERS",
-    verticalSubtitle: "Lazy Companions",
+    title: "Thành viên",
+    subtitle: "Nơi hội tụ những người điềm tĩnh hướng nội",
+    verticalTitle: "Nhân vật truyền cảm lạnh",
+    verticalSubtitle: "Nhân Vật Quan Trọng",
     bgImage: img04,
-    themeColor: "rgba(224, 242, 254, 0.7)"
+    themeColor: "rgba(224, 242, 254, 0.7)" // Soft Azure Blue
   },
-
   characters: [
     {
       id: 1,
-      name: "VoTinh",
-      title: "The Founder",
-      description:
-        "The leader who created the guild simply because he was bored. Just stay calm, play games, and enjoy the moment.",
+      name: "Vô Tịnh",
+      title: "Đại Đương Gia",
+      description: "Mọi thứ đều phải đánh đổi bằng hiện kim.",
       image: votinh,
-      seal: "FOUNDER"
+      seal: "SEN"
     },
     {
       id: 2,
-      name: "Ameo",
-      title: "The Friendly Strategist",
-      description:
-        "Always ready to help others and keep the guild atmosphere positive and relaxed.",
-      image: votinh,
-      seal: "ALLY"
+      name: "Kyren",
+      title: "Tam Đương Gia",
+      description: "...",
+      image: kyren,
+      seal: "GEN"
     },
     {
       id: 3,
-      name: "Lee",
-      title: "The Chill Player",
-      description:
-        "Believes that games should be played slowly and peacefully — winning is good, but having fun together is better.",
-      image: votinh,
-      seal: "CHILL"
+      name: "Felix",
+      title: "Tứ Đương Gia",
+      description: "Em là ameo ạ.",
+      image: felix,
+      seal: "LIX"
     },
     {
       id: 4,
-      name: "Ky Lam",
-      title: "The Chill Player",
-      description:
-        "Believes that games should be played slowly and peacefully — winning is good, but having fun together is better.",
-      image: votinh,
-      seal: "CHILL"
+      name: "Kỳ Lâm",
+      title: "Quân Sư",
+      description: "Thích đấm nhau nhưng yếu vờ lờ",
+      image: kylam,
+      seal: "NHICA"
     },
     {
       id: 5,
-      name: "Tan Lan",
-      title: "The Chill Player",
-      description:
-        "Believes that games should be played slowly and peacefully — winning is good, but having fun together is better.",
-      image: votinh,
-      seal: "CHILL"
+      name: "Nhan Vân",
+      title: "Chiết phó đường chủ",
+      description: "Phẩu thuật thẩm mỹ quá đà",
+      image: nhanvan,
+      seal: "TRAPGIRL"
     },
     {
       id: 6,
-      name: "Van Hi Hoa",
-      title: "The Chill Player",
-      description:
-        "Believes that games should be played slowly and peacefully — winning is good, but having fun together is better.",
-      image: votinh,
-      seal: "CHILL"
-    },
+      name: "Tần Lan",
+      title: "Yến Sư",
+      description: "Phản diện nửa mùa",
+      image: tanlan,
+      seal: "TRAPGIRL"
+    }
   ],
-
   historySection: {
-    verticalTitle: "STORY",
-    verticalSubtitle: "Guild Journey",
-    bgImage: img01,
-    themeColor: "rgba(245, 245, 240, 0.8)"
+    verticalTitle: "BIÊN NIÊN SỬ",
+    verticalSubtitle: "Lịch Sử Thanh Khiết",
+    bgImage: img05,
+    themeColor: "rgba(245, 245, 240, 0.8)" // Parchment/Paper
   },
-
   history: [
     {
       id: 1,
-      title: "A Guild Born from Boredom",
-      description:
-        "LazyGuys was created in 2025 when the leader had too much free time and decided to start a guild just for fun.",
+      title: "Lời Thề Dưới Gốc Anh Đào",
+      description: "Những người sáng lập đã cùng uống rượu dưới gốc cây anh đào ngàn năm tuổi, thề nguyện xây dựng một bang hội thoát khỏi những tranh chấp thế gian. Những cánh hoa rơi đã chứng kiến sự ra đời của LazyGuys.",
       type: "sakura"
     },
     {
       id: 2,
-      title: "A Place to Relax",
-      description:
-        "Over time, the guild became a small community where players could relax, chat, and enjoy games together without pressure.",
+      title: "Trận Chiến Bầu Trời Xanh",
+      description: "Trong một lần bảo vệ lãnh thổ, các thành viên của chúng tôi đã di chuyển như những đám mây trôi—vô định và mềm mại. Đối thủ không thể tung ra một đòn trúng đích và cuối cùng đã cùng chúng tôi thưởng trà.",
       type: "sky"
     }
   ],
-
   gallerySection: {
-    verticalTitle: "MEMORIES",
-    verticalSubtitle: "Moments Together",
-    bgImage: img05,
-    themeColor: "rgba(236, 254, 255, 0.7)"
+    verticalTitle: "Kỷ niệm",
+    verticalSubtitle: "Hành Trình Thị Giác",
+    bgImage: img01,
+    themeColor: "rgba(236, 254, 255, 0.7)" // Misty Teal
   },
-
   gallery: [
     {
       id: 1,
-      title: "Peaceful Moments",
+      title: "Đường Hoa Anh Đào Cổ Kính",
       image: img03,
       span: "large"
     },
     {
       id: 2,
-      title: "Spring Vibes",
-      image: img02,
+      title: "Hoa Xuân Đua Nở",
+      image: team,
       span: "small"
     },
     {
       id: 3,
-      title: "Calm Landscapes",
-      image: img04,
+      title: "Núi Phú Sĩ Và Hoa Anh Đào",
+      image: img03,
       span: "small"
     }
   ],
-
   videoSection: {
-    title: "Guild Moments",
-    description:
-      "Just a collection of peaceful and fun moments shared by our members.",
-    buttonText: "Watch"
+    title: "Bang xà lơ",
+    description: "Một bộ sưu tập xà lơ của bang...",
+    buttonText: "Mở Cuộn Giấy"
   },
-
   footer: {
     links: [
-      { label: "Guild Chat", href: "#" },
-      { label: "Guild Rules", href: "#" },
-      { label: "Join Us", href: "#" }
+      { label: "Diễn Đàn Bang Hội", href: "#" },
+      { label: "Luật Bang Hội", href: "#" },
+      { label: "Không tuyển thành viên", href: "#" }
     ],
-    copyright: "© 2025-2026 LAZYGUYS GUILD. PLAY PEACEFULLY."
+    copyright: "© 2025-2026 LAZYGUYS GUILD"
   }
 };
