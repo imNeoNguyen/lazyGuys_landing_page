@@ -10,13 +10,17 @@ import img03 from './assets/images/img_03.jpg';
 import img04 from './assets/images/img_04.jpg';
 import img05 from './assets/images/img_05.jpg';
 import img06 from './assets/images/img_06.png';
-import votinh from './assets/images/votinh.png';
+import votinh from './assets/images/votinh.jpg';
 import kyren from './assets/images/kyren.jpg';
 import felix from './assets/images/felix.jpg';
-import kylam from './assets/images/ky_lam.jpg';
+import kylam from './assets/images/kylam.jpg';
 import team from './assets/images/team.jpg';
-import nhanvan from './assets/images/nhanvan.jpg';
-import tanlan from './assets/images/tanlan.jpg';
+import nhanvan from './assets/images/nhan_van.jpg';
+import tanlan from './assets/images/tan_lan.jpg';
+import lybachlam from './assets/images/lybachlam.jpg';
+import nguocngacdu from './assets/images/nguocngacdu.jpg';
+import langtutuyet from './assets/images/langtutuyet.jpg';
+import vanhihoa from './assets/images/vanhihoa.png';
 
 export const GUILD_DATA = {
   name: "LazyGuys",
@@ -94,19 +98,51 @@ export const GUILD_DATA = {
     },
     {
       id: 5,
+      name: "Tần Lan",
+      title: "Mưu Khách",
+      description: "Kẻ phản diện nửa mùa - thao túng tâm lý",
+      image: tanlan,
+      seal: "BADGIRL"
+    },
+    {
+      id: 6,
+      name: "Lăng Tử Tuyết",
+      title: "Nhã Công",
+      description: "Sen của Mina - chuyên bán bánh tráng nướng",
+      image: langtutuyet,
+      seal: "MINASEN"
+    },
+    {
+      id: 7,
+      name: "Lý Bạch Lâm",
+      title: "Thính Đường Chủ",
+      description: "Trap boy đời đầu - không trap đời không nể",
+      image: lybachlam,
+      seal: "ONGCHU"
+    },
+    {
+      id: 8,
+      name: "Vân Hi Hoà",
+      title: "Chiết Đường Chủ",
+      description: "Thích gặm dưa - yêu cái đẹp - thích làm người bí ẩn",
+      image: vanhihoa,
+      seal: "TUMUI"
+    },
+    {
+      id: 9,
       name: "Nhan Vân",
-      title: "Chiết phó đường chủ",
-      description: "Phẩu thuật thẩm mỹ quá đà",
+      title: "Chiết Phó Đường Chủ",
+      description: "Trap girl đời đầu - phẩu thuật thẩm mỹ quá đà - đẹp là thích",
       image: nhanvan,
       seal: "TRAPGIRL"
     },
     {
-      id: 6,
-      name: "Tần Lan",
-      title: "Yến Sư",
-      description: "Phản diện nửa mùa",
-      image: tanlan,
-      seal: "TRAPGIRL"
+      id: 10,
+      name: "Ngược ngạc du",
+      title: "Thính Đường Chúng",
+      description: "Bang chỉ là slot dự phòng",
+      image: nguocngacdu,
+      seal: "TE"
     }
   ],
   historySection: {
@@ -118,14 +154,14 @@ export const GUILD_DATA = {
   history: [
     {
       id: 1,
-      title: "Lời Thề Dưới Gốc Anh Đào",
+      title: "Chổ này là conten số 1",
       description: "Những người sáng lập đã cùng uống rượu dưới gốc cây anh đào ngàn năm tuổi, thề nguyện xây dựng một bang hội thoát khỏi những tranh chấp thế gian. Những cánh hoa rơi đã chứng kiến sự ra đời của LazyGuys.",
       type: "sakura"
     },
     {
       id: 2,
-      title: "Trận Chiến Bầu Trời Xanh",
-      description: "Trong một lần bảo vệ lãnh thổ, các thành viên của chúng tôi đã di chuyển như những đám mây trôi—vô định và mềm mại. Đối thủ không thể tung ra một đòn trúng đích và cuối cùng đã cùng chúng tôi thưởng trà.",
+      title: "Chổ này là content số 2",
+      description: "Được cái có mấy người xà lơ, lâu lâu lắc đít, lâu lâu ăn xin chung, hên là chưa ai báo, xin cám ơn! Có content thì note lại đi trời, ai mà nghĩ ra được mấy cái này.",
       type: "sky"
     }
   ],

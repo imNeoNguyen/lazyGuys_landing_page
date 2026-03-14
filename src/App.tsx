@@ -25,19 +25,15 @@ const ScrollProgress = () => {
 };
 
 const Petals = () => {
-  const [petals, setPetals] = useState<{ id: number; left: string; duration: number; delay: number; size: number; rotate: number }[]>([]);
-
-  useEffect(() => {
-    const newPetals = Array.from({ length: 12 }).map((_, i) => ({
+  const petals = React.useMemo(() => 
+    Array.from({ length: 10 }).map((_, i) => ({
       id: i,
       left: `${Math.random() * 100}%`,
-      duration: 10 + Math.random() * 15,
+      duration: 12 + Math.random() * 18,
       delay: Math.random() * 10,
-      size: 8 + Math.random() * 10,
+      size: 6 + Math.random() * 8,
       rotate: Math.random() * 360,
-    }));
-    setPetals(newPetals);
-  }, []);
+    })), []);
 
   return (
     <div className="fixed inset-0 pointer-events-none overflow-hidden z-[60]">
@@ -48,7 +44,7 @@ const Petals = () => {
           initial={{ y: -100, opacity: 0 }}
           animate={{ 
             y: '110vh', 
-            opacity: [0, 1, 1, 0],
+            opacity: [0, 0.8, 0.8, 0],
             rotate: p.rotate + 360
           }}
           transition={{
@@ -59,7 +55,7 @@ const Petals = () => {
           }}
           style={{ left: p.left }}
         >
-          <svg width={p.size} height={p.size} viewBox="0 0 24 24" fill="#ffb7c5" opacity="0.4">
+          <svg width={p.size} height={p.size} viewBox="0 0 24 24" fill="#ffb7c5" opacity="0.3">
             <path d="M12,2C12,2 10,6 6,10C2,14 4,18 8,20C12,22 12,22 12,22C12,22 12,22 16,20C20,18 22,14 18,10C14,6 12,2 12,2Z" />
           </svg>
         </motion.div>
@@ -146,36 +142,51 @@ const MobileTitle = ({ title, subtitle }: { title: string, subtitle: string }) =
   </div>
 );
 
-const CharacterCard = ({ name, title, description, image, seal, index }: { name: string, title: string, description: string, image: string, seal: string, index: number }) => (
-  <motion.div 
-    initial={{ opacity: 0, y: 30 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true, margin: "0px 0px -50px 0px" }}
-    transition={{ duration: 0.6, delay: index * 0.1 }}
-    whileHover={{ y: -10 }}
-    className="bg-white/40 backdrop-blur-md border border-accent/10 p-4 md:p-6 rounded-xl shadow-sm hover:shadow-2xl transition-all duration-500 group h-full relative overflow-hidden will-change-transform transform-gpu"
-  >
-    <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-    <div className="relative aspect-[3/4] overflow-hidden mb-4 md:mb-6 rounded-lg shadow-inner">
-      <motion.img 
-        whileHover={{ scale: 1.1 }}
-        transition={{ duration: 1.5 }}
-        src={image} 
-        alt={name} 
-        className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
-        referrerPolicy="no-referrer"
-      />
-      <div className="absolute top-2 right-2 md:top-4 md:right-4">
-        <Seal text={seal} variant="accent" />
+const CharacterCard = ({ name, title, description, image, seal, index }: { name: string, title: string, description: string, image: string, seal: string, index: number }) => {
+  const [isActive, setIsActive] = useState(false);
+
+  return (
+    <motion.div 
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "0px 0px -50px 0px" }}
+      transition={{ duration: 0.6, delay: index * 0.1 }}
+      whileTap={{ scale: 0.98 }}
+      onClick={() => setIsActive(!isActive)}
+      onMouseEnter={() => setIsActive(true)}
+      onMouseLeave={() => setIsActive(false)}
+      className={`bg-white/60 backdrop-blur-xl border ${isActive ? 'border-accent shadow-2xl' : 'border-accent/10 shadow-sm'} p-4 md:p-6 rounded-2xl transition-all duration-500 h-full relative overflow-hidden will-change-transform transform-gpu cursor-pointer`}
+    >
+      <div className={`absolute inset-0 bg-gradient-to-br from-accent/10 to-transparent transition-opacity duration-500 ${isActive ? 'opacity-100' : 'opacity-0'}`} />
+      
+      <div className="relative aspect-[3/4] overflow-hidden mb-4 md:mb-6 rounded-xl shadow-inner">
+        <motion.img 
+          animate={{ 
+            scale: isActive ? 1.1 : 1,
+            filter: isActive ? 'grayscale(0%)' : 'grayscale(100%)'
+          }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          src={image} 
+          alt={name} 
+          className="w-full h-full object-cover"
+          referrerPolicy="no-referrer"
+        />
+        <div className="absolute top-3 right-3 md:top-4 md:right-4">
+          <Seal text={seal} variant="accent" />
+        </div>
+        
+        {/* Decorative corner */}
+        <div className={`absolute bottom-0 left-0 w-12 h-12 border-l-2 border-b-2 border-accent/30 transition-all duration-500 ${isActive ? 'opacity-100 scale-100' : 'opacity-0 scale-50'}`} />
       </div>
-    </div>
-    <div className="relative z-10">
-      <h4 className="font-brush text-2xl md:text-3xl text-sky-950 mb-1 group-hover:text-accent transition-colors duration-300">{name}</h4>
-      <p className="font-sans text-[10px] md:text-xs uppercase tracking-widest text-accent mb-3 md:mb-4 font-semibold">{title}</p>
-      <p className="text-sky-800 text-xs md:text-sm leading-relaxed font-serif italic opacity-80 group-hover:opacity-100 transition-opacity">"{description}"</p>
-    </div>
-  </motion.div>
-);
+
+      <div className="relative z-10">
+        <h4 className={`font-brush text-2xl md:text-3xl mb-1 transition-colors duration-300 ${isActive ? 'text-accent' : 'text-sky-950'}`}>{name}</h4>
+        <p className="font-sans text-[10px] md:text-xs uppercase tracking-widest text-accent mb-3 md:mb-4 font-bold opacity-80">{title}</p>
+        <p className={`text-sky-800 text-xs md:text-sm leading-relaxed font-serif italic transition-opacity duration-300 ${isActive ? 'opacity-100' : 'opacity-60'}`}>"{description}"</p>
+      </div>
+    </motion.div>
+  );
+};
 
 export default function App() {
   const { scrollY } = useScroll();
@@ -278,7 +289,7 @@ export default function App() {
             >
               <span className="hidden md:block w-16 h-px bg-gradient-to-r from-transparent to-accent" />
               <span className="text-center px-6 py-2 bg-white/30 backdrop-blur-sm rounded-full border border-white/40 shadow-sm">
-                Hội người hướng nội
+                Hội người hướng nội • Partime
               </span>
               <span className="hidden md:block w-16 h-px bg-gradient-to-l from-transparent to-accent" />
             </motion.div>
@@ -398,8 +409,8 @@ export default function App() {
             ))}
             <div className="flex-none w-[200px] sm:w-[250px] md:w-[350px] snap-center flex flex-col items-center justify-center border-2 border-dashed border-accent/30 rounded-sm bg-white/20 backdrop-blur-sm p-6 text-center">
               <Star className="text-accent mb-4 animate-pulse" size={32} md:size={48} />
-              <p className="font-brush text-xl md:text-2xl text-sky-900">Thêm Những Huyền Thoại...</p>
-              <p className="text-sky-600 font-serif italic text-xs md:text-sm mt-2">Đang nghỉ ngơi trong rừng trúc</p>
+              <p className="font-brush text-xl md:text-2xl text-sky-900">Members...</p>
+              <p className="text-sky-600 font-serif italic text-xs md:text-sm mt-2">Chưa kịp xuất hiện</p>
             </div>
           </div>
           
@@ -499,7 +510,7 @@ export default function App() {
             <Seal text="LAZY" variant="accent" />
           </div>
           <p className="font-brush text-4xl md:text-5xl text-white mb-4 md:mb-6 tracking-widest">Bang Hội {GUILD_DATA.name}</p>
-          <p className="font-sans text-[10px] md:text-xs tracking-[0.2em] md:tracking-[0.4em] uppercase mb-8 md:mb-12 text-accent">{GUILD_DATA.edition} • Thành lập {GUILD_DATA.foundedYear}</p>
+          <p className="font-sans text-[10px] md:text-xs tracking-[0.2em] md:tracking-[0.4em] uppercase mb-8 md:mb-12 text-accent">{GUILD_DATA.edition} • Từ {GUILD_DATA.foundedYear}</p>
           
           <div className="flex flex-wrap justify-center gap-6 md:gap-12 text-[10px] md:text-sm tracking-widest uppercase font-light">
             {GUILD_DATA.footer.links.map((link, idx) => (
