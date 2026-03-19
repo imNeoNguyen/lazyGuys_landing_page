@@ -203,5 +203,32 @@ export const GUILD_DATA = {
       { label: "Không tuyển thành viên", href: "#" }
     ],
     copyright: "© 2025-2026 LAZYGUYS GUILD"
-  }
+  },
+
+  tarotCards: [
+    { id: 0, name: "The Fool", title: "Gã Khờ", image: "https://www.trustedtarot.com/img/cards/the-fool.png", meaning: "Sự khởi đầu mới, niềm tin ngây thơ, sự tự do và phiêu lưu." },
+    { id: 1, name: "The Magician", title: "Nhà Ảo Thuật", image: "https://www.trustedtarot.com/img/cards/the-magician.png", meaning: "Sức mạnh ý chí, khả năng sáng tạo, sự tập trung và hành động." },
+    { id: 2, name: "The High Priestess", title: "Nữ Tư Tế", image: "https://www.trustedtarot.com/img/cards/the-high-priestess.png", meaning: "Trực giác, bí ẩn, tiềm thức và sự tĩnh lặng nội tâm." },
+    { id: 3, name: "The Empress", title: "Nữ Hoàng", image: "https://www.trustedtarot.com/img/cards/the-empress.png", meaning: "Sự trù phú, nuôi dưỡng, sáng tạo và vẻ đẹp thiên nhiên." },
+    { id: 4, name: "The Emperor", title: "Hoàng Đế", image: "https://www.trustedtarot.com/img/cards/the-emperor.png", meaning: "Cấu trúc, kỷ luật, quyền lực và sự ổn định." },
+    { id: 5, name: "The Hierophant", title: "Giáo Hoàng", image: "https://www.trustedtarot.com/img/cards/the-hierophant.png", meaning: "Truyền thống, niềm tin, sự dẫn dắt và học hỏi." },
+    { id: 6, name: "The Lovers", title: "Tình Nhân", image: "https://www.trustedtarot.com/img/cards/the-lovers.png", meaning: "Tình yêu, sự hòa hợp, lựa chọn và giá trị cốt lõi." },
+    { id: 7, name: "The Chariot", title: "Cỗ Xe", image: "https://www.trustedtarot.com/img/cards/the-chariot.png", meaning: "Chiến thắng, ý chí, sự kiểm soát và quyết tâm." },
+    { id: 8, name: "Strength", title: "Sức Mạnh", image: "https://www.trustedtarot.com/img/cards/strength.png", meaning: "Lòng dũng cảm, sự kiên nhẫn, lòng trắc ẩn và sức mạnh nội tâm." },
+    { id: 9, name: "The Hermit", title: "Ẩn Sĩ", image: "https://www.trustedtarot.com/img/cards/the-hermit.png", meaning: "Sự chiêm nghiệm, cô độc, tìm kiếm sự thật và ánh sáng nội tâm." },
+    { id: 10, name: "Wheel of Fortune", title: "Bánh Xe Số Phận", image: "https://www.trustedtarot.com/img/cards/wheel-of-fortune.png", meaning: "Sự thay đổi, chu kỳ, vận may và định mệnh." },
+    { id: 11, name: "Justice", title: "Công Lý", image: "https://www.trustedtarot.com/img/cards/justice.png", meaning: "Sự công bằng, sự thật, luật pháp và nhân quả." },
+    { id: 12, name: "The Hanged Man", title: "Người Treo", image: "https://www.trustedtarot.com/img/cards/the-hanged-man.png", meaning: "Sự buông bỏ, góc nhìn mới, sự hy sinh và chờ đợi." },
+    { id: 13, name: "Death", title: "Cái Chết", image: "https://www.trustedtarot.com/img/cards/death.png", meaning: "Sự kết thúc, biến đổi, tái sinh và chuyển giao." },
+    { id: 14, name: "Temperance", title: "Sự Tiết Độ", image: "https://www.trustedtarot.com/img/cards/temperance.png", meaning: "Sự cân bằng, hòa hợp, kiên nhẫn và điều độ." },
+    { id: 15, name: "The Devil", title: "Ác Quỷ", image: "https://www.trustedtarot.com/img/cards/the-devil.png", meaning: "Sự ràng buộc, vật chất, nỗi sợ và cơn nghiện." },
+    { id: 16, name: "The Tower", title: "Tòa Tháp", image: "https://www.trustedtarot.com/img/cards/the-tower.png", meaning: "Sự thay đổi đột ngột, hỗn loạn, thức tỉnh và phá hủy ảo tưởng." },
+    { id: 17, name: "The Star", title: "Ngôi Sao", image: "https://www.trustedtarot.com/img/cards/the-star.png", meaning: "Hy vọng, niềm tin, sự chữa lành và cảm hứng." },
+    { id: 18, name: "The Moon", title: "Mặt Trăng", image: "https://www.trustedtarot.com/img/cards/the-moon.png", meaning: "Ảo ảnh, nỗi sợ, trực giác và sự không chắc chắn." },
+    { id: 19, name: "The Sun", title: "Mặt Trời", image: "https://www.trustedtarot.com/img/cards/the-sun.png", meaning: "Niềm vui, thành công, sự sáng tỏ và sức sống." },
+    { id: 20, name: "Judgement", title: "Phán Xét", image: "https://www.trustedtarot.com/img/cards/judgement.png", meaning: "Sự thức tỉnh, phán xét, tha thứ và tiếng gọi linh hồn." },
+    { id: 21, name: "The World", title: "Thế Giới", image: "https://www.trustedtarot.com/img/cards/the-world.png", meaning: "Sự hoàn thành, viên mãn, đạt được mục đích và kết nối." }
+  ],
 };
+
+
