@@ -747,7 +747,7 @@ export default function App() {
       {/* Tarot Section */}
       <TarotSection />
 
-      {/* Footer */}
+      {/* Footer footer */}
       <footer className="bg-sky-950 text-sky-200 py-16 md:py-24 px-6 relative overflow-hidden">
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent/50 to-transparent" />
         <div className="max-w-4xl mx-auto text-center relative z-10">
