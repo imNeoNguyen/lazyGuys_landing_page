@@ -21,6 +21,10 @@ import lybachlam from './assets/images/lybachlam.jpg';
 import nguocngacdu from './assets/images/nguocngacdu.jpg';
 import langtutuyet from './assets/images/langtutuyet.jpg';
 import vanhihoa from './assets/images/vanhihoa.png';
+import lamtoto from './assets/images/lamtoto.jpg';
+import vouhuong from './assets/images/vouhuong.jpg';
+import lamuyenhoa from './assets/images/lamuyenhoa.jpg';
+
 
 export const GUILD_DATA = {
   name: "LazyGuys",
@@ -143,6 +147,30 @@ export const GUILD_DATA = {
       description: "Bang chỉ là slot dự phòng",
       image: nguocngacdu,
       seal: "TE"
+    },
+    {
+      id: 11,
+      name: "Lam Tố Tố",
+      title: "Phượng đường chúng",
+      description: "Tú Bà biến thái - Bình máu di động",
+      image: lamtoto,
+      seal: "TUBA"
+    },
+    {
+      id: 12,
+      name: "Vô u Hương",
+      title: "Quy đường chúng",
+      description: "Trap girl chuyên cho vay nặng lãi",
+      image: vouhuong,
+      seal: "TRAP"
+    },
+    {
+      id: 13,
+      name: "Lam Uyển Hoa",
+      title: "Quy đường chúng",
+      description: "Max max theo cơn, xin thông cảm, dòng đời đưa đẩy PTTM",
+      image: lamuyenhoa,
+      seal: "PTTM"
     }
   ],
   historySection: {
