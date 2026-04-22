@@ -15,7 +15,7 @@ import kyren from './assets/images/kyren.jpg';
 import felix from './assets/images/felix.jpg';
 import kylam from './assets/images/kylam.jpg';
 import team from './assets/images/team.jpg';
-import nhanvan from './assets/images/nhan_van.jpg';
+import nhanvan from './assets/images/nhanvan.jpg';
 import tanlan from './assets/images/tan_lan.jpg';
 import lybachlam from './assets/images/lybachlam.jpg';
 import nguocngacdu from './assets/images/nguocngacdu.jpg';
